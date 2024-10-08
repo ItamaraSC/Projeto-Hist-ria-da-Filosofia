@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    float: left;
+}
+
+.menu li {
+    position: relative;
+    float: left;
+}
+
+.menu li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.menu li a:hover {
+    box-shadow: 0 3px 10px 0 #CCC;
+    text-shadow: 0px 0px 5px #fff;
+}
+
+.menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    display: none;
+    z-index: 1000;
+}
+
+.menu li:hover ul,
+.menu li.over ul {
+    display: block;
+}
+
+.menu li ul li {
+    display: block;
+    width: 150px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+h2, h3 {
+    position: relative;
+    padding-left: 40px;
+    text-align: center;
+    font-family: Georgia;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.texto {
+    font-family: 'Times New Roman';
+    font-size: 21px;
+    text-align: justify;
+    margin: 25px;
+    padding: 25px;
+    background-color: rgba(235, 230, 230, 0.226);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 40%;
+    max-width: 40%;
+    border-radius: 8px;
+    backdrop-filter: blur(8px);
+}
+
+.texto p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* imagens*/
+.imagem-socrates {
+    display: block;
+    position: absolute;
+    width: 370px;
+    height: auto;
+    margin-left: 73%;
+    margin-top: -34%;
+    border-radius: 4px;
+}
+
+.imagem-platao {
+    display:block;
+    position: absolute;
+    width: 370px;
+    height: auto;
+    margin-left: 73%;
+    margin-top: -30%;
+    border-radius: 4px;
+}
+
+.imagem-aristoteles {
+    display: block;
+    position: absolute;
+    width: 340px;
+    height: auto;
+    margin-left: 73%;
+    margin-top: -30%;
+    border-radius: 4px;
+}
+
+.imagem-agostinho {
+    display: block;
+    position: absolute;
+    width: 340px;
+    height: auto;
+    margin-left: 73%;
+    margin-top: -30%;
+    border-radius: 4px;
+}
+
+.imagem-descartes {
+    display: block;
+    position: absolute;
+    width: 310px;
+    height: auto;
+    margin-left: 73%;
+    margin-top:-420px;
+    border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .texto {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .imagem-superior,
+    .imagem-socrates,
+    .imagem-platao,
+    .imagem-aristoteles,
+    .imagem-agostinho,
+    .imagem-descartes {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 18px;
+    }
+
+    .titulo {
+        font-size: 1.2rem;
+    }
+
+    .texto {
+        font-size: 18px;
+    }
+}
+
+footer {
+    background-color: #f1eded;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
